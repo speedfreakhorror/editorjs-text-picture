@@ -1,0 +1,44 @@
+:root {
+  --ejs-ink: #1f2328;
+  --ejs-muted: #59636e;
+  --ejs-line: #d1d9e0;
+  --ejs-surface: #ffffff;
+  --ejs-accent: #0969da;
+  --ejs-danger: #d1242f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ejs-ink: #f0f6fc;
+    --ejs-muted: #9198a1;
+    --ejs-line: #3d444d;
+    --ejs-surface: #0d1117;
+    --ejs-accent: #4493f8;
+    --ejs-danger: #f85149;
+  }
+}
+.ejs-text-picture { color: var(--ejs-ink); }
+.ejs-text-picture-btn {
+  font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 6px; cursor: pointer;
+  color: var(--ejs-ink); background: var(--ejs-surface); border: 1px solid var(--ejs-line);
+}
+.ejs-text-picture-btn:hover:not(:disabled) { border-color: var(--ejs-accent); }
+.ejs-text-picture-btn:disabled { opacity: 0.5; cursor: default; }
+.ejs-text-picture-input {
+  font: inherit; width: 100%; box-sizing: border-box; padding: 6px 8px; border-radius: 6px;
+  color: var(--ejs-ink); background: var(--ejs-surface); border: 1px solid var(--ejs-line);
+}
+.ejs-text-picture-input[aria-invalid='true'] { border-color: var(--ejs-danger); }
+.ejs-text-picture-label { display: block; font-size: 12px; color: var(--ejs-muted); margin-top: 8px; }
+.ejs-text-picture-label .ejs-text-picture-input { margin-top: 3px; }
+.ejs-text-picture-error { color: var(--ejs-danger); font-size: 13px; min-height: 0; }
+.ejs-text-picture-field { display: flex; flex-direction: column; gap: 6px; }
+.ejs-text-picture-img { max-width: 100%; max-height: 320px; object-fit: contain; border-radius: 6px; background: var(--ejs-line); align-self: flex-start; }
+.ejs-text-picture-empty { padding: 24px; text-align: center; color: var(--ejs-muted); border: 1px dashed var(--ejs-line); border-radius: 6px; }
+.ejs-text-picture-bar { display: flex; flex-wrap: wrap; gap: 6px; }
+.ejs-text-picture-text { min-height: 1.4em; outline: none; padding: 6px 8px; border: 1px solid var(--ejs-line); border-radius: 6px; background: var(--ejs-surface); }
+.ejs-text-picture-text:empty::before { content: attr(data-placeholder); color: var(--ejs-muted); }
+.ejs-text-picture { display: flex; gap: 14px; align-items: flex-start; }
+.ejs-text-picture[data-side='left'] { flex-direction: row-reverse; }
+.ejs-text-picture-text { flex: 1; min-width: 0; }
+.ejs-text-picture-pic { flex: 0 0 40%; min-width: 0; }
+@media (max-width: 640px) { .ejs-text-picture, .ejs-text-picture[data-side='left'] { flex-direction: column; } .ejs-text-picture-pic { flex-basis: auto; width: 100%; } }
