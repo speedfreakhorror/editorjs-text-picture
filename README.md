@@ -5,7 +5,7 @@ A text-beside-a-picture block for Editor.js, with the picture on the left or the
 ## Install
 
 ```
-npm i github:Speedfreakhorror-Official/editorjs-text-picture
+npm i github:speedfreakhorror/editorjs-text-picture
 ```
 
 Import the tool and its stylesheet:

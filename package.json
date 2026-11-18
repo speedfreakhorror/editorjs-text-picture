@@ -1,6 +1,6 @@
 {
   "name": "editorjs-text-picture",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A text-beside-a-picture block for Editor.js, with the picture on the left or the right.",
   "private": false,
   "license": "MIT",
